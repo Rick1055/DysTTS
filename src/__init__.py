@@ -6,6 +6,7 @@ Modules:
 - data_ingestion: TORGO clinical dataset ingestion and dynamic collation
 - biomarker_engine: Objective bio-acoustic telemetry (Speech Gym)
 - speech_recognizer: SOTA Interspeech dysarthria ASR engine (Parakeet-TDT)
+- feedback_engine: Human-in-the-Loop patient verification and adaptation buffer
 """
 
 from .synthetic_dysarthria import SyntheticDysarthriaEngine
@@ -18,6 +19,7 @@ from .biomarker_engine import (
     extract_speech_gym_biomarkers,
 )
 from .speech_recognizer import DysarthriaSpeechRecognizer
+from .feedback_engine import FeedbackEngine
 
 __all__ = [
     "SyntheticDysarthriaEngine",
@@ -30,5 +32,6 @@ __all__ = [
     "compute_phonatory_instability",
     "extract_speech_gym_biomarkers",
     "DysarthriaSpeechRecognizer",
+    "FeedbackEngine",
 ]
 
