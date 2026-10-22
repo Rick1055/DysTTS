@@ -2,6 +2,7 @@ import numpy as np
 import scipy.signal
 import librosa
 import soundfile
+import os
 
 class SyntheticDysarthriaEngine():
     def __init__(self, sample_rate=16000, seed=42):

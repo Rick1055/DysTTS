@@ -169,7 +169,8 @@ def get_wavlm_model():
     global _WAVLM_MODEL
     if _WAVLM_MODEL is None:
         from transformers import WavLMModel
-        _WAVLM_MODEL = WavLMModel.from_pretrained("microsoft/wavlm-base")
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+        _WAVLM_MODEL = WavLMModel.from_pretrained("microsoft/wavlm-base").to(device)
         _WAVLM_MODEL.eval()
 
     return _WAVLM_MODEL
