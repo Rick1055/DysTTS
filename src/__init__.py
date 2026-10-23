@@ -9,6 +9,7 @@ Modules:
 - feedback_engine: Human-in-the-Loop patient verification and adaptation buffer
 - intent_repair: Contextual dysfluency, stutter, and intent restoration engine
 - voice_restoration: Biological voice restoration & personal timbre cloning engine
+- supabase_manager: Supabase Auth, PostgreSQL telemetry, and cloud audio storage gateway
 """
 
 from .synthetic_dysarthria import SyntheticDysarthriaEngine
@@ -24,6 +25,7 @@ from .speech_recognizer import DysarthriaSpeechRecognizer
 from .feedback_engine import FeedbackEngine
 from .intent_repair import IntentRepair
 from .voice_restoration import VoiceRestorationEngine
+from .supabase_manager import SupabaseManager
 
 __all__ = [
     "SyntheticDysarthriaEngine",
@@ -39,4 +41,5 @@ __all__ = [
     "FeedbackEngine",
     "IntentRepair",
     "VoiceRestorationEngine",
+    "SupabaseManager",
 ]
