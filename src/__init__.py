@@ -7,6 +7,8 @@ Modules:
 - biomarker_engine: Objective bio-acoustic telemetry (Speech Gym)
 - speech_recognizer: SOTA Interspeech dysarthria ASR engine (Parakeet-TDT)
 - feedback_engine: Human-in-the-Loop patient verification and adaptation buffer
+- intent_repair: Contextual dysfluency, stutter, and intent restoration engine
+- voice_restoration: Biological voice restoration & personal timbre cloning engine
 """
 
 from .synthetic_dysarthria import SyntheticDysarthriaEngine
@@ -20,6 +22,8 @@ from .biomarker_engine import (
 )
 from .speech_recognizer import DysarthriaSpeechRecognizer
 from .feedback_engine import FeedbackEngine
+from .intent_repair import IntentRepair
+from .voice_restoration import VoiceRestorationEngine
 
 __all__ = [
     "SyntheticDysarthriaEngine",
@@ -33,5 +37,6 @@ __all__ = [
     "extract_speech_gym_biomarkers",
     "DysarthriaSpeechRecognizer",
     "FeedbackEngine",
+    "IntentRepair",
+    "VoiceRestorationEngine",
 ]
-
